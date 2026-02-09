@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prince Singh | Portfolio</title>
+
+<meta name="description" content="Prince Singh – CSE student focused on Software Testing & QA Automation with Java, Selenium, and testing frameworks.">
+<meta name="keywords" content="Prince Singh, Software Testing, QA Automation, Java, Selenium, Portfolio">
+<meta name="author" content="Prince Singh">
+
+<style>
+:root {
+    --bg-gradient: linear-gradient(135deg, #e0e7ff, #ede9fe);
+    --card-bg: rgba(255,255,255,0.65);
+    --text-main: #0f172a;
+    --accent: #6366f1;
+}
+
+body.dark {
+    --bg-gradient: linear-gradient(135deg, #1e1b4b, #312e81);
+    --card-bg: rgba(255,255,255,0.12);
+    --text-main: #f8fafc;
+    --accent: #a78bfa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    background: var(--bg-gradient);
+    color: var(--text-main);
+    line-height: 1.6;
+    transition: 0.4s ease;
+}
+
+/* NAVBAR */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.6);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body.dark nav { background: rgba(0,0,0,0.4); }
+
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.toggle {
+    cursor: pointer;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 100px 20px 70px;
+}
+
+.hero h1 { font-size: 3rem; }
+
+.hero p {
+    margin-top: 12px;
+    font-size: 1.15rem;
+    opacity: 0.9;
+}
+
+/* SECTIONS */
+.section {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--accent);
+    padding-left: 12px;
+}
+
+/* CARD */
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(14px);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    margin-bottom: 20px;
+    transition: 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px) scale(1.02);
+}
+
+/* GRID */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+/* TIMELINE */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--accent);
+}
+
+.timeline-item {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "🎓";
+    position: absolute;
+    left: -8px;
+    top: 0;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 50%;
+    padding: 6px;
+    font-size: 0.75rem;
+}
+
+/* ANIMATIONS */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.float {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .hero h1 { font-size: 2.2rem; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <strong>Prince Singh</strong>
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#certifications">Certifications</a>
+        <span class="toggle" onclick="toggleTheme()">🌙</span>
+    </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero reveal">
+    <h1>Prince Singh</h1>
+    <p>Software Testing & QA Automation Enthusiast</p>
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="section reveal">
+    <h2>About Me</h2>
+    <div class="card">
+        <p>
+            I’m currently pursuing my B.Tech in Computer Science & Engineering from
+            Lovely Professional University, building strong skills in
+            <strong>Software Testing & QA Automation</strong>.
+            I am actively learning Java-based automation, writing structured test cases,
+            and understanding how real-world testing frameworks work.
+            <br><br>
+            I’m passionate about improving product quality, identifying bugs,
+            and ensuring smooth user experiences. I enjoy hands-on practice
+            with automation tools and continuously expanding my knowledge
+            of testing methodologies and industry technologies.
+        </p>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section reveal">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+        <div class="card float">
+            <h3>🔹 Programming & Scripting</h3>
+            <ul>
+                <li>Java</li>
+                <li>OOP Concepts</li>
+                <li>Basic SQL</li>
+            </ul>
+        </div>
+
+        <div class="card float">
+            <h3>🔹 Testing Skills</h3>
+            <ul>
+                <li>Manual Testing</li>
+                <li>Automation Testing</li>
+                <li>Test Case Design & Execution</li>
+                <li>Bug Reporting</li>
+            </ul>
+        </div>
+
+        <div class="card float">
+            <h3>🔹 Tools & Frameworks</h3>
+            <ul>
+                <li>Selenium WebDriver</li>
+                <li>JUnit</li>
+                <li>TestNG (Learning)</li>
+                <li>Maven</li>
+                <li>Eclipse IDE</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="section reveal">
+    <h2>Education</h2>
+    <div class="card timeline float">
+
+        <div class="timeline-item">
+            <h3>Bachelor of Technology – Computer Science & Engineering</h3>
+            <p>Lovely Professional University, Punjab</p>
+            <p><em>Aug 2023 – Present</em></p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Intermediate (Class XII)</h3>
+            <p>Orchid Jr College, Maharashtra</p>
+            <p><em>Jul 2022 – Mar 2023</em></p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Matriculation (Class X)</h3>
+            <p>Alphonsa English High School, Maharashtra</p>
+            <p><em>Apr 2016 – Mar 2018</em></p>
+        </div>
+
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section reveal">
+    <h2>Projects</h2>
+
+    <div class="card">
+        <h3>GroceryBot – AI Recipe Assistant</h3>
+        <p>AI-powered recipe application with voice commands and dynamic UI.</p>
+        <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+    </div>
+
+    <div class="card">
+        <h3>Smart Trade Simulator</h3>
+        <p>Stock trading simulation with real-time price changes.</p>
+        <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+    </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements" class="section reveal">
+    <h2>Achievements</h2>
+    <div class="card timeline float">
+        <div class="timeline-item">
+            <h3>Hackverse Hackathon – 10th Rank</h3>
+            <p>Ranked top 10 among 150+ participants.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>National Science Olympiad – AIR 400</h3>
+            <p>Secured national rank 400 out of 4000+ students.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="section reveal">
+    <h2>Certifications</h2>
+    <div class="skills-grid">
+        <div class="card float"><h3>Google</h3><p>The Bits and Bytes of Computer Networking</p></div>
+        <div class="card float"><h3>IBM</h3><p>Introduction to Hardware and Operating Systems</p></div>
+        <div class="card float"><h3>Coursera</h3><p>Fundamentals of Network Communications</p></div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="reveal">
+    <p>📧 <a href="mailto:ssprince329@gmail.com">ssprince329@gmail.com</a></p>
+    <p>
+        <a href="https://github.com/SSinghprince">GitHub</a> |
+        <a href="https://linkedin.com/in/prince-singh-622557304">LinkedIn</a>
+    </p>
+</footer>
+
+<script>
+function toggleTheme() {
+    document.body.classList.toggle("dark");
+}
+
+const reveals = document.querySelectorAll(".reveal");
+window.addEventListener("scroll", () => {
+    reveals.forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+            el.classList.add("active");
+        }
+    });
+});
+</script>
+
+</body>
+</html>
